@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt - Fetron Gradnja</title>
+<meta name="description" content="Direktna prodaja: +381 62 875 8592, fetrondoo@gmail.com, Jovana Cvijića 9, Novi Sad.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#021C41">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;family=Mulish:wght@400;500;600;700&amp;display=swap">
+<style>
+html,body{margin:0;overflow-x:hidden;background:#FFFFFF}
+.root{box-sizing:border-box;width:100%;min-height:100%;background:#FFFFFF;color:#1F2A3A;font-family:Mulish,system-ui,sans-serif;font-size:1.0625rem;line-height:1.6;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.root *{box-sizing:border-box}
+.wrap{width:100%;max-width:1100px;margin:0 auto;padding:0 1.25rem}
+
+.hd{position:sticky;top:0;z-index:5;background:#FFFFFF;border-bottom:1px solid #DDE2E8;margin-bottom:calc(-4.25rem - 1px);transition:background-color .2s ease,border-color .2s ease}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4.25rem}
+.hd.over{background:transparent;border-bottom-color:rgba(255,255,255,.28)}
+.hd.over .wm b,.hd.over .wm span,.hd.over .wm b i{color:#FFFFFF}
+.hd.over .lm-n,.hd.over .lm-g{fill:#FFFFFF}
+.hd.over .nav a{color:#FFFFFF}
+.hd.over .tel{visibility:hidden;opacity:0}
+.hd.over .menu-btn{color:#FFFFFF;border-color:rgba(255,255,255,.55)}
+.logo{display:inline-flex;align-items:center;gap:.6rem;min-height:48px;text-decoration:none}
+.logo svg{width:2.1rem;height:auto;flex:none}
+.wm{display:flex;flex-direction:column;line-height:1}
+.wm b{font-family:Montserrat,sans-serif;font-weight:700;font-size:1.3rem;letter-spacing:.06em;color:#021C41}
+.wm b i{font-style:normal;color:#C19C68}
+.wm span{font-family:Montserrat,sans-serif;font-weight:500;font-size:.56rem;letter-spacing:.52em;color:#021C41;margin-top:.3rem;padding-left:.1rem}
+.nav{display:none}
+.hd-r{display:flex;align-items:center;gap:.5rem}
+.tel{display:inline-flex;align-items:center;gap:.5rem;white-space:nowrap;font-size:.95rem;min-height:48px;min-width:48px;padding:0 .25rem;color:#021C41;font-weight:700;text-decoration:none;transition:opacity .2s ease,visibility .2s}
+.tel .tnum{display:none}
+.tel .lbl{display:none}
+.menu-btn{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;padding:0;border:1px solid #C3CAD3;border-radius:6px;background:transparent;color:#021C41;cursor:pointer}
+.menu-btn .ic{width:1.5rem;height:1.5rem}
+.mnav{display:none}
+.mnav.open{display:flex;flex-direction:column;padding:.25rem 1.25rem 1rem;background:#FFFFFF;border-top:1px solid #DDE2E8}
+.mnav a{display:flex;align-items:center;min-height:52px;border-bottom:1px solid #DDE2E8;color:#021C41;font-family:Montserrat,sans-serif;font-weight:700;text-decoration:none}
+.mnav a.cur{color:#8A6A3A}
+
+.dd{position:relative;display:flex;align-items:center}
+.dd-btn{display:inline-flex;align-items:center;justify-content:center;width:28px;height:48px;padding:0;border:0;background:transparent;color:#021C41;cursor:pointer}
+.dd-btn .ic{width:1rem;height:1rem}
+.hd.over .dd-btn{color:#FFFFFF}
+.dd-menu{position:absolute;top:100%;left:-.75rem;z-index:10;display:none;flex-direction:column;min-width:14rem;padding:.4rem;background:#FFFFFF;border:1px solid #DDE2E8;border-radius:6px}
+.dd:hover .dd-menu,.dd:focus-within .dd-menu,.dd.open .dd-menu{display:flex}
+.nav .dd-menu a,.hd.over .nav .dd-menu a{display:flex;align-items:center;min-height:44px;padding:0 .75rem;border-radius:4px;color:#021C41;font-family:Mulish,sans-serif;font-weight:600;font-size:.95rem;text-decoration:none}
+.nav .dd-menu a:hover{background:#F6F8FA;color:#021C41;text-decoration:none}
+.mnav .mg{display:flex;flex-direction:column;padding:.25rem 0 .5rem;border-bottom:1px solid #DDE2E8}
+.mnav a.mg-top{min-height:48px;border-bottom:0}
+.mnav a.mg-sub{min-height:44px;padding-left:1rem;border-bottom:0;color:#4B5869;font-family:Mulish,sans-serif;font-weight:600}
+.mnav a.mg-top.cur{color:#8A6A3A}
+
+.ic{width:1.25rem;height:1.25rem;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.ac{stroke:#8A6A3A}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:52px;padding:.75rem 1.4rem;border:0;border-radius:6px;background:#C19C68;color:#021C41;font-family:Montserrat,sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.02em;text-decoration:none;cursor:pointer;max-width:100%;text-align:center}
+.btn:hover{background:#B08A55;color:#021C41}
+.tag{display:inline-block;padding:.05rem .4rem;border:1px dashed #4B5869;border-radius:4px;color:#4B5869;font-size:.7rem;font-weight:700;letter-spacing:.06em;line-height:1.5;vertical-align:middle;white-space:nowrap}
+.eyebrow{margin:0;color:#8A6A3A;font-family:Montserrat,sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+h1,h2,h3{font-family:Montserrat,sans-serif;margin:0;color:#021C41;overflow-wrap:break-word}
+h1{font-size:clamp(2.6rem,11vw,3.25rem);font-weight:800;line-height:1.05;letter-spacing:-.025em}
+h2{font-size:clamp(1.8rem,7.5vw,2.4rem);font-weight:700;line-height:1.12;letter-spacing:-.02em}
+h3{font-size:1.25rem;font-weight:700;line-height:1.2;letter-spacing:-.01em}
+p{margin:0;max-width:65ch}
+.lead{font-size:1.125rem}
+.lnk{display:inline-flex;align-items:center;gap:.5rem;min-height:48px;color:#021C41;font-weight:700;text-decoration:underline;text-decoration-color:#C19C68;text-decoration-thickness:2px;text-underline-offset:.3em}
+
+.hero{position:relative;background-color:#006B8B;background-image:url(assets/hero.jpg);background-repeat:no-repeat;background-size:cover;background-position:left top;padding:calc(4.25rem + 2rem) 0 3rem}
+.hero::before{content:"";position:absolute;inset:0;background:rgba(2,28,65,.3)}
+.hero .wrap{position:relative;display:flex;flex-direction:column;gap:1rem;align-items:flex-start}
+.hero h1,.hero .lead{color:#FFFFFF}
+.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;margin:0;padding:0;list-style:none;font-size:.88rem;color:#FFFFFF}
+.crumbs a{display:inline-flex;align-items:center;min-height:44px;color:#FFFFFF;font-weight:700}
+.crumbs li+li::before{content:"/";margin-right:.4rem;opacity:.7}
+
+.sec{padding:3.5rem 0;border-top:1px solid #DDE2E8}
+.sec-first{border-top:0}
+.sec-hd{display:flex;flex-direction:column;gap:.9rem;margin-bottom:2rem}
+
+.quick{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem;margin-bottom:1.25rem}
+.qt{display:flex;align-items:center;gap:1rem;min-height:5.5rem;padding:1.1rem 1.25rem;border:1px solid #DDE2E8;background:#FFFFFF;text-decoration:none;color:#021C41}
+.qt:hover{border-color:#021C41;color:#021C41}
+.qt .ico{display:flex;align-items:center;justify-content:center;width:3rem;height:3rem;flex:none;border:1px solid #C19C68;border-radius:50%}
+.qt span{display:flex;flex-direction:column;min-width:0}
+.qt small{color:#4B5869;font-size:.82rem;font-weight:600}
+.qt b{font-family:Montserrat,sans-serif;font-size:1.1rem;font-weight:800;overflow-wrap:anywhere}
+
+.contact{display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem;align-items:stretch}
+.panel{display:flex;flex-direction:column;gap:1.1rem;padding:1.25rem;border:1px solid #DDE2E8}
+.panel>h3{padding-bottom:.9rem;border-bottom:1px solid #DDE2E8}
+.cside{background:#FFFFFF}
+.cmeta{display:grid;grid-auto-rows:minmax(4.5rem,1fr);flex:1}
+.crow{display:flex;gap:1rem;align-items:center;padding:.75rem 0;border-top:1px solid #DDE2E8}
+.crow:first-child{border-top:0}
+.crow>.ic{box-sizing:content-box;flex:none;width:1.25rem;height:1.25rem;padding:.65rem;border:1px solid #C19C68;border-radius:50%}
+.crow>div{display:flex;flex-direction:column;gap:.15rem;min-width:0}
+.crow .k{color:#4B5869;font-size:.82rem;font-weight:600}
+.crow .v{color:#021C41;font-weight:700;overflow-wrap:anywhere}
+.soc{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.25rem}
+.soc a{display:inline-flex;align-items:center;gap:.5rem;min-height:48px;padding:0 1rem;border:1px solid #C3CAD3;border-radius:6px;color:#021C41;font-weight:700;font-size:.95rem;text-decoration:none}
+.soc a:hover{border-color:#021C41}
+form{background:#F6F8FA}
+label{display:flex;flex-direction:column;gap:.4rem;font-weight:700;font-size:.95rem;color:#021C41}
+label.grow{flex:1}
+input,select,textarea{width:100%;min-height:52px;padding:.75rem .9rem;border:1px solid #7F8A99;border-radius:6px;background:#FFFFFF;color:#1F2A3A;font:inherit;font-size:1rem}
+textarea{min-height:7rem;flex:1;resize:vertical}
+.fnote{font-size:.85rem;color:#4B5869}
+
+.places{display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem}
+.place{display:flex;flex-direction:column;border:1px solid #DDE2E8;background:#FFFFFF}
+.place .map{display:flex;align-items:center;justify-content:center;padding:1rem;aspect-ratio:16/10;background:#E6EBF0;border-bottom:1px solid #DDE2E8;color:#4B5869;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-align:center;text-transform:uppercase}
+.place-b{display:flex;flex-direction:column;gap:.4rem;padding:1.25rem;flex:1}
+.place-b .lnk{margin-top:auto}
+.place-b p{color:#4B5869}
+
+.mapwrap{display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem}
+.map-box{position:relative;border:1px solid #DDE2E8;background:#EEF1F4}
+.map-svg{display:block;width:100%;height:auto}
+.map-lbl{font-family:Montserrat,sans-serif;font-size:15px;font-weight:700;letter-spacing:3px;fill:#4B5869;text-anchor:middle}
+.map-water{fill:#4F7391;font-size:13px}
+.map-pin{position:absolute;display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin:0;padding:0;border:3px solid #FFFFFF;border-radius:50% 50% 50% 0;background:#021C41;color:#FFFFFF;font-family:Montserrat,sans-serif;font-weight:800;font-size:.95rem;cursor:pointer;transform:translate(-50%,-100%) rotate(-45deg);transition:background-color .2s ease}
+.map-pin span{transform:rotate(45deg)}
+.map-pin.on{background:#C19C68;color:#021C41}
+.map-note{margin:0;padding:.6rem 1rem;border-top:1px solid #DDE2E8;background:#FFFFFF;font-size:.82rem;color:#4B5869}
+.map-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;border-top:1px solid #021C41}
+.map-item{border-bottom:1px solid #DDE2E8}
+.map-item-btn{display:flex;align-items:flex-start;gap:1rem;width:100%;min-height:48px;padding:1rem 0;border:0;background:transparent;color:#021C41;font:inherit;text-align:left;cursor:pointer}
+.map-num{display:inline-flex;align-items:center;justify-content:center;flex:none;width:2rem;height:2rem;border-radius:50%;background:#021C41;color:#FFFFFF;font-family:Montserrat,sans-serif;font-weight:800;font-size:.85rem}
+.map-item.on .map-num{background:#C19C68;color:#021C41}
+.map-txt{display:flex;flex-direction:column;gap:.1rem;min-width:0}
+.map-txt b{font-family:Montserrat,sans-serif;font-size:1.05rem}
+.map-txt span{color:#4B5869}
+.map-txt .map-kind{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6A3A}
+.map-links{display:flex;flex-wrap:wrap;gap:0 1.25rem;padding:0 0 1rem 3rem}
+@media (prefers-reduced-motion: reduce){.map-pin{transition:none}}
+.plac{display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem;padding:1.5rem;border:1px solid #DDE2E8;background:#F6F8FA}
+.plac-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.25rem}
+
+.firm{margin:0;display:grid;grid-template-columns:minmax(0,1fr);border-top:1px solid #021C41}
+.firm div{display:grid;grid-template-columns:minmax(0,1fr);gap:.1rem;padding:.9rem 0;border-bottom:1px solid #DDE2E8}
+.firm dt{color:#4B5869;font-size:.85rem;font-weight:600}
+.firm dd{margin:0;color:#021C41;font-weight:700}
+
+.ft{padding:3.5rem 0 1.5rem;background:#021C41;color:#C9D2DE;font-size:.95rem}
+.ft-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:2.5rem}
+.ft-brand{display:flex;flex-direction:column;align-items:flex-start;gap:1rem}
+.ft-brand p{max-width:32ch}
+.ft .wm b,.ft .wm span{color:#FFFFFF}
+.ft-claim{font-family:Montserrat,sans-serif;font-size:1.35rem;font-weight:700;color:#FFFFFF;letter-spacing:-.01em}
+.ft-col{display:flex;flex-direction:column;align-items:flex-start;gap:.15rem}
+.ft-h{margin:0 0 .6rem;font-family:Montserrat,sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#C19C68}
+.ft-col>a{display:inline-flex;align-items:center;gap:.6rem;min-height:44px;color:#FFFFFF;font-weight:600;text-decoration:none}
+.ft-col>a:hover{color:#C19C68;text-decoration:underline;text-underline-offset:.3em}
+.ft-ico .ic{stroke:#C19C68}
+.ft-proj{flex-direction:column;align-items:flex-start !important;justify-content:center;gap:0 !important;padding:.35rem 0}
+.ft-proj b{font-family:Montserrat,sans-serif;font-weight:700;color:#FFFFFF}
+.ft-proj span{font-size:.88rem;font-weight:500;color:#C9D2DE}
+.ft-soc{display:flex;gap:.5rem;margin-top:.75rem}
+.ft-soc a{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border:1px solid #3A5378;border-radius:6px;color:#FFFFFF}
+.ft-soc a:hover{border-color:#C19C68;color:#C19C68}
+.ft-bottom{display:flex;flex-direction:column;gap:.75rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid #2A4166;font-size:.85rem}
+.slogan{font-family:Montserrat,sans-serif;color:#C19C68;font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:.72rem}
+.ft-top-link{display:inline-flex;align-items:center;gap:.4rem;min-height:44px;color:#FFFFFF;font-weight:700;text-decoration:none}
+.ft-top-link:hover{color:#C19C68}
+a{color:#021C41}a:hover{color:#8A6A3A}
+.ft a:hover{color:#C19C68}
+/*M*/
+@media (min-width:768px){
+  .wrap{padding:0 2rem}
+  .hd .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);min-height:4.75rem}
+  .hd .logo{justify-self:start}
+  .hd .nav{justify-self:center}
+  .hd-r{justify-self:end}
+  .hd{margin-bottom:calc(-4.75rem - 1px)}
+  .nav{display:flex;gap:1.25rem}
+  .nav a{display:inline-flex;align-items:center;min-height:48px;color:#021C41;text-decoration:none;font-family:Montserrat,sans-serif;font-weight:600;font-size:.9rem}
+  .nav a:hover,.nav a.cur{text-decoration:underline;text-decoration-color:#C19C68;text-decoration-thickness:2px;text-underline-offset:.4em}
+  .tel .tnum{display:inline}
+  .menu-btn,.mnav,.mnav.open{display:none}
+  h1{font-size:clamp(3rem,5vw,4rem)}
+  h2{font-size:2.5rem}
+  .hero{padding:calc(4.75rem + 4.5rem) 0 4.5rem}
+  .sec{padding:6rem 0}
+  .sec-hd{margin-bottom:2.5rem}
+  .quick{grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem;margin-bottom:2rem}
+  .contact{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem}
+  .panel{padding:2rem}
+  .places{grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
+  .mapwrap{grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:2rem;align-items:start}
+  .plac{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);align-items:center;padding:2rem}
+  .plac-ctas{justify-content:flex-end}
+  .firm{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:2rem}
+  .ft{padding:5rem 0 2rem}
+  .ft-grid{grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:3rem}
+  .ft-bottom{flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 2rem}
+}
+@media (min-width:768px) and (max-width:1023px){
+  .nav{gap:.75rem}
+  .tel .tnum{display:none}
+  .tel .lbl{display:inline}
+}
+/*/M*/
+
+.concept-bar{margin:0;padding:.45rem 1rem;background:#C19C68;color:#021C41;font-family:Mulish,system-ui,sans-serif;font-size:.82rem;font-weight:700;line-height:1.4;text-align:center}
+.menu-btn .ic-close{display:none}
+.menu-btn[aria-expanded="true"] .ic-close{display:block}
+.menu-btn[aria-expanded="true"] .ic-open{display:none}
+.map-item:not(.on) .map-links{display:none}
+.form-status{margin:0;padding:.75rem 1rem;border:1px solid #C19C68;border-radius:6px;background:#FFFFFF;color:#021C41;font-size:.92rem;font-weight:600}
+.form-status[hidden],.apt[hidden],.empty[hidden]{display:none}
+</style>
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<p class="concept-bar" role="note">Koncept sajta u izradi. Ovo nije zvanični sajt Fetron Gradnje.</p>
+<div class="root">
+
+<header class="hd over">
+<div class="wrap">
+<a class="logo" href="index.html" aria-label="Fetron Gradnja, početna">
+<svg viewBox="286 126 232 250" aria-hidden="true"><polygon class="lm-g" fill="#C19C68" points="290,225 390,172 390,372 290,372"></polygon><polygon class="lm-n" fill="#021C41" points="413,130 513,185 513,328 478,328 478,255 448,255 448,328 413,328"></polygon></svg>
+<span class="wm"><b><i>FE</i>TRON</b><span>GRADNJA</span></span>
+</a>
+<nav class="nav" aria-label="Glavni meni">
+<div class="dd">
+<a class="dd-top" href="index.html">Početna</a>
+<button class="dd-btn" type="button" aria-label="Sekcije: Početna" aria-expanded="false"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+<div class="dd-menu">
+<a href="index.html#stanovi">Stanovi u ponudi</a>
+<a href="index.html#lokacije">Lokacije</a>
+<a href="index.html#placevi">Otkup placeva</a>
+</div>
+</div>
+<div class="dd">
+<a class="dd-top" href="ponuda.html">Stanovi</a>
+<button class="dd-btn" type="button" aria-label="Sekcije: Stanovi" aria-expanded="false"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+<div class="dd-menu">
+<a href="ponuda.html#lista">Svi stanovi</a>
+<a href="ponuda.html#cena">Cena i dostupnost</a>
+</div>
+</div>
+<div class="dd">
+<a class="dd-top cur" href="kontakt.html" aria-current="page">Kontakt</a>
+<button class="dd-btn" type="button" aria-label="Sekcije: Kontakt" aria-expanded="false"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+<div class="dd-menu">
+<a href="#upit">Pošaljite upit</a>
+<a href="#lokacije">Mapa lokacija</a>
+<a href="#firma">Podaci o firmi</a>
+</div>
+</div>
+</nav>
+<div class="hd-r">
+<a class="tel" href="tel:+381628758592" aria-label="Pozovite prodaju, +381 62 875 8592"><svg class="ic ac" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg><span class="lbl">Pozovite</span><span class="tnum">+381 62 875 8592</span></a>
+<button class="menu-btn" type="button" aria-label="Meni" aria-expanded="false" aria-controls="mnav">
+<svg class="ic ic-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+<svg class="ic ic-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+</button>
+</div>
+</div>
+<nav id="mnav" class="mnav" aria-label="Meni za telefon">
+<div class="mg">
+<a class="mg-top" href="index.html">Početna</a>
+<a class="mg-sub" href="index.html#stanovi">Stanovi u ponudi</a>
+<a class="mg-sub" href="index.html#lokacije">Lokacije</a>
+<a class="mg-sub" href="index.html#placevi">Otkup placeva</a>
+</div>
+<div class="mg">
+<a class="mg-top" href="ponuda.html">Stanovi</a>
+<a class="mg-sub" href="ponuda.html#lista">Svi stanovi</a>
+<a class="mg-sub" href="ponuda.html#cena">Cena i dostupnost</a>
+</div>
+<div class="mg">
+<a class="mg-top cur" href="kontakt.html" aria-current="page">Kontakt</a>
+<a class="mg-sub" href="#upit">Pošaljite upit</a>
+<a class="mg-sub" href="#lokacije">Mapa lokacija</a>
+<a class="mg-sub" href="#firma">Podaci o firmi</a>
+</div>
+</nav>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Kontakt">
+<div class="wrap">
+<ol class="crumbs"><li><a href="index.html">Početna</a></li><li>Kontakt</li></ol>
+<h1>Kontakt</h1>
+<p class="lead">Stanove prodajemo direktno, bez agencije. Pozovite prodaju, pišite nam ili ostavite broj.</p>
+</div>
+</section>
+
+<section class="sec sec-first" id="upit">
+<div class="wrap">
+<div class="quick">
+<a class="qt" href="tel:+381628758592"><span class="ico"><svg class="ic ac" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg></span><span><small>Direktna prodaja</small><b>+381 62 875 8592</b></span></a>
+<a class="qt" href="mailto:fetrondoo@gmail.com"><span class="ico"><svg class="ic ac" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span><span><small>E-pošta</small><b>fetrondoo@gmail.com</b></span></a>
+<a class="qt" href="https://www.google.com/maps/search/?api=1&amp;query=Jovana+Cvijića+9,+21000+Novi+Sad"><span class="ico"><svg class="ic ac" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span><span><small>Adresa</small><b>Jovana Cvijića 9, Novi Sad</b></span></a>
+</div>
+
+<div class="contact">
+<div class="panel cside">
+<h3>Sve na jednom mestu</h3>
+<div class="cmeta">
+<div class="crow"><svg class="ic ac" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><div><span class="k">Radno vreme prodaje</span><span class="v">[PRIMER] pon - pet, 9 - 17h</span><span class="v">[PRIMER] subota, 9 - 13h</span></div></div>
+<div class="crow"><svg class="ic ac" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg><div><span class="k">Adresa</span><span class="v">Jovana Cvijića 9, 21000 Novi Sad</span></div></div>
+<div class="crow"><svg class="ic ac" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.5"></circle><circle cx="6" cy="12" r="2.5"></circle><circle cx="18" cy="19" r="2.5"></circle><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"></path></svg><div><span class="k">Društvene mreže</span><div class="soc">
+<a href="https://www.instagram.com/fetron_gradnja/"><svg class="ic ac" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5h.01"></path></svg>Instagram</a>
+<a href="https://www.facebook.com/p/fetron-gradnja-61577676821141/"><svg class="ic ac" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H6v4h2v7h4v-7h2.5l.5-4h-3V7.5a.5.5 0 0 1 .5-.5H15z"></path></svg>Facebook</a>
+</div></div></div>
+<div class="crow"><svg class="ic ac" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V9l8-6 8 6v12"></path><path d="M9 21v-7h6v7"></path></svg><div><span class="k">Prodaja</span><span class="v">Direktno od investitora</span></div></div>
+</div>
+</div>
+<form class="panel" action="#" data-concept-form>
+<h3>Pošaljite upit</h3>
+<label for="k-ime">Ime i prezime<input id="k-ime" name="ime" type="text" autocomplete="name"></label>
+<label for="k-tel">Telefon<input id="k-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel"></label>
+<label for="k-mail">E-pošta (nije obavezno)<input id="k-mail" name="email" type="email" autocomplete="email" inputmode="email"></label>
+<label for="k-tema">Šta vas zanima<select id="k-tema" name="tema"><option>Stan u Tron Villa I, Lipov Gaj</option><option>Stan u Tron Villa 2, Veternik</option><option>Penthouse 95 m², Veternik</option><option>Prodajem plac</option><option>Nešto drugo</option></select></label>
+<label class="grow" for="k-por">Poruka<textarea id="k-por" name="poruka" placeholder="Na primer: zanima me stan od 56 m² sa terasom"></textarea></label>
+<button class="btn" type="submit">Pošaljite upit</button>
+<p class="fnote">Broj koristimo samo da vas pozovemo povodom upita.</p>
+</form>
+</div>
+</div>
+</section>
+
+<section class="sec" id="lokacije">
+<div class="wrap">
+<div class="sec-hd">
+<p class="eyebrow">Gde smo</p>
+<h2>Mapa lokacija</h2>
+</div>
+<div class="mapwrap">
+<div class="map-box">
+<svg class="map-svg" viewBox="0 0 800 500" role="img" aria-label="Šematska mapa: sedište firme u Novom Sadu, Tron Villa I u Lipovom Gaju i Tron Villa 2 u Veterniku">
+<rect width="800" height="500" fill="#EEF1F4"></rect>
+<rect x="455" y="150" width="320" height="235" rx="40" fill="#E1E6EC"></rect>
+<rect x="55" y="185" width="200" height="150" rx="34" fill="#E1E6EC"></rect>
+<rect x="265" y="120" width="140" height="115" rx="28" fill="#E1E6EC"></rect>
+<path d="M0 300 C200 292 420 288 800 276" fill="none" stroke="#FFFFFF" stroke-width="10"></path>
+<path d="M330 0 C335 120 345 260 360 500" fill="none" stroke="#FFFFFF" stroke-width="7"></path>
+<path d="M560 0 C570 140 600 300 640 500" fill="none" stroke="#FFFFFF" stroke-width="7"></path>
+<path d="M0 432 C150 402 260 472 400 442 S650 382 800 420" fill="none" stroke="#BCD0E0" stroke-width="34" stroke-linecap="round"></path>
+<text x="640" y="196" class="map-lbl">NOVI SAD</text>
+<text x="155" y="226" class="map-lbl">VETERNIK</text>
+<text x="335" y="148" class="map-lbl">LIPOV GAJ</text>
+<text x="520" y="470" class="map-lbl map-water">DUNAV</text>
+</svg>
+
+<button class="map-pin on" type="button" style="left: 77%; top: 61%" aria-label="1: FETRON DOO, Jovana Cvijića 9, 21000 Novi Sad" aria-pressed="true"><span>1</span></button>
+
+<button class="map-pin" type="button" style="left: 42%; top: 37%" aria-label="2: Tron Villa I, Dežea Kostolanjija, Lipov Gaj" aria-pressed="false"><span>2</span></button>
+
+<button class="map-pin" type="button" style="left: 20%; top: 53%" aria-label="3: Tron Villa 2, Marka Servijskog 8, Veternik" aria-pressed="false"><span>3</span></button>
+
+<p class="map-note">Šematski prikaz, nije u razmeri. Tačnu lokaciju otvorite u Google Maps.</p>
+</div>
+<ol class="map-list">
+
+<li class="map-item on">
+<button class="map-item-btn" type="button" aria-expanded="true">
+<span class="map-num">1</span>
+<span class="map-txt"><span class="map-kind">Sedište firme</span><b>FETRON DOO</b><span>Jovana Cvijića 9, 21000 Novi Sad</span></span>
+</button>
+<div class="map-links">
+<a class="lnk" href="https://www.google.com/maps/search/?api=1&amp;query=Jovana+Cvijića+9,+21000+Novi+Sad">Otvorite u Google Maps</a>
+
+</div>
+</li>
+
+<li class="map-item">
+<button class="map-item-btn" type="button" aria-expanded="false">
+<span class="map-num">2</span>
+<span class="map-txt"><span class="map-kind">Gradilište</span><b>Tron Villa I</b><span>Dežea Kostolanjija, Lipov Gaj</span></span>
+</button>
+<div class="map-links">
+<a class="lnk" href="https://www.google.com/maps/search/?api=1&amp;query=Dežea+Kostolanjija,+Novi+Sad">Otvorite u Google Maps</a>
+<a class="lnk" href="ponuda.html">Stanovi u ovoj zgradi</a>
+</div>
+</li>
+
+<li class="map-item">
+<button class="map-item-btn" type="button" aria-expanded="false">
+<span class="map-num">3</span>
+<span class="map-txt"><span class="map-kind">Gradilište</span><b>Tron Villa 2</b><span>Marka Servijskog 8, Veternik</span></span>
+</button>
+<div class="map-links">
+<a class="lnk" href="https://www.google.com/maps/search/?api=1&amp;query=Marka+Servijskog+8,+Veternik">Otvorite u Google Maps</a>
+<a class="lnk" href="ponuda.html">Stanovi u ovoj zgradi</a>
+</div>
+</li>
+
+</ol>
+</div>
+</div>
+</section>
+
+<section class="sec" id="placevi">
+<div class="wrap">
+<div class="plac">
+<div style="display: flex; flex-direction: column; gap: .6rem">
+<p class="eyebrow">Otkup placeva</p>
+<h2 style="font-size: 1.6rem">Prodajete plac u Novom Sadu ili okolini?</h2>
+<p>FETRON gradnja kupuje građevinsko zemljište. Pozovite i recite nam gde je parcela i kolika je.</p>
+</div>
+<div class="plac-ctas">
+<a class="btn" href="tel:+381628758592">Ponudite parcelu</a>
+<a class="lnk" href="mailto:fetrondoo@gmail.com">fetrondoo@gmail.com</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="firma">
+<div class="wrap">
+<div class="sec-hd">
+<p class="eyebrow">Podaci o firmi</p>
+<h2>FETRON DOO</h2>
+</div>
+<dl class="firm">
+<div><dt>Pun naziv</dt><dd>FETRON DOO Novi Sad</dd></div>
+<div><dt>Sedište</dt><dd>Jovana Cvijića 9, 21000 Novi Sad</dd></div>
+<div><dt>PIB</dt><dd>114405584</dd></div>
+<div><dt>Matični broj</dt><dd>22018990</dd></div>
+<div><dt>Delatnost</dt><dd>4120 - Izgradnja stambenih i nestambenih zgrada</dd></div>
+<div><dt>E-pošta</dt><dd>fetrondoo@gmail.com</dd></div>
+</dl>
+</div>
+</section>
+</main>
+
+<footer class="ft">
+<div class="wrap">
+<div class="ft-grid">
+<div class="ft-brand">
+<a class="logo" href="index.html" aria-label="Fetron Gradnja, početna">
+<svg viewBox="286 126 232 250" aria-hidden="true"><polygon fill="#C19C68" points="290,225 390,172 390,372 290,372"></polygon><polygon fill="#FFFFFF" points="413,130 513,185 513,328 478,328 478,255 448,255 448,328 413,328"></polygon></svg>
+<span class="wm"><b><i>FE</i>TRON</b><span>GRADNJA</span></span>
+</a>
+<p class="ft-claim">Više od doma</p>
+<p>Gradimo stanove u Lipovom Gaju i Veterniku i prodajemo ih direktno, bez agencije.</p>
+<a class="btn" href="tel:+381628758592"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>Pozovite prodaju</a>
+</div>
+<nav class="ft-col" aria-label="Stranice">
+<h2 class="ft-h">Stranice</h2>
+<a href="index.html">Početna</a>
+<a href="ponuda.html">Ponuda stanova</a>
+<a href="index.html#placevi">Otkup placeva</a>
+<a href="kontakt.html">Kontakt</a>
+</nav>
+<div class="ft-col">
+<h2 class="ft-h">Gradimo</h2>
+<a class="ft-proj" href="ponuda.html"><b>Tron Villa I</b><span>Dežea Kostolanjija, Lipov Gaj</span></a>
+<a class="ft-proj" href="ponuda.html"><b>Tron Villa 2</b><span>Marka Servijskog 8, Veternik</span></a>
+</div>
+<div class="ft-col">
+<h2 class="ft-h">Kontakt</h2>
+<a class="ft-ico" href="tel:+381628758592"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>+381 62 875 8592</a>
+<a class="ft-ico" href="mailto:fetrondoo@gmail.com"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>fetrondoo@gmail.com</a>
+<a class="ft-ico" href="https://www.google.com/maps/search/?api=1&amp;query=Jovana+Cvijića+9,+21000+Novi+Sad"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Jovana Cvijića 9, Novi Sad</a>
+<div class="ft-soc">
+<a href="https://www.instagram.com/fetron_gradnja/" aria-label="Instagram, @fetron_gradnja"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5h.01"></path></svg></a>
+<a href="https://www.facebook.com/p/fetron-gradnja-61577676821141/" aria-label="Facebook, fetron gradnja"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H6v4h2v7h4v-7h2.5l.5-4h-3V7.5a.5.5 0 0 1 .5-.5H15z"></path></svg></a>
+</div>
+</div>
+</div>
+<div class="ft-bottom">
+<p class="ft-legal">© 2026 FETRON DOO · Jovana Cvijića 9, 21000 Novi Sad · PIB 114405584 · MB 22018990</p>
+<p class="slogan">Kvalitet · Poverenje · Siguran dom</p>
+<a class="ft-top-link" href="#top"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"></path></svg>Na vrh</a>
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>
